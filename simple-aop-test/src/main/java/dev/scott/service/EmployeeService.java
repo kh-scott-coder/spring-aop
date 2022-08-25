@@ -2,6 +2,7 @@ package dev.scott.service;
 
 import org.springframework.stereotype.Service;
 
+import dev.scott.aspect.CheckHash;
 import dev.scott.model.Employee;
 
 @Service
@@ -15,6 +16,7 @@ public class EmployeeService {
 		return emp;
 	}
 
+	@CheckHash
 	public void deleteEmployee(String empId) {
 	}
 }
